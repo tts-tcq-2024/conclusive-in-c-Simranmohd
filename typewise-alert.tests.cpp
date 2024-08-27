@@ -19,28 +19,20 @@ TEST(TypeWiseAlertTestSuite, ClassifiesTemperatureBreach) {
 }
 
 // Test for checkAndAlert function
-// Note: This test is more complex as it involves output. You might need to redirect stdout to test it properly.
 TEST(TypeWiseAlertTestSuite, ChecksAndAlerts) {
     BatteryCharacter batteryChar;
     batteryChar.coolingType = PASSIVE_COOLING;
-    
-    // This will print to console, so we can't easily test the output
-    // You might need to redirect stdout to a string stream to test this properly
     checkAndAlert(TO_CONTROLLER, batteryChar, 40);
     checkAndAlert(TO_EMAIL, batteryChar, 40);
 }
 
 // Test for sendToController function
 TEST(TypeWiseAlertTestSuite, SendsToController) {
-    // This will print to console, so we can't easily test the output
-    // You might need to redirect stdout to a string stream to test this properly
     sendToController(TOO_HIGH);
 }
 
 // Test for sendToEmail function
 TEST(TypeWiseAlertTestSuite, SendsToEmail) {
-    // This will print to console, so we can't easily test the output
-    // You might need to redirect stdout to a string stream to test this properly
     sendToEmail(TOO_LOW);
     sendToEmail(TOO_HIGH);
     sendToEmail(NORMAL);
